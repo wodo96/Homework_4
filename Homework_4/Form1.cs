@@ -12,7 +12,7 @@ namespace Homework_4
         public Pen penGreen = new Pen(Color.Green, 1);
         public Pen penRed = new Pen(Color.Red, 1);
         public Pen penPurple = new Pen(Color.Purple, 1);
-        readonly double successPr = 0.5;
+        public double successPr=0.5;
 
         public Form1()
         {
@@ -22,7 +22,7 @@ namespace Homework_4
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            this.successPr = (double)this.numericUpDown3.Value;
         }
 
 
@@ -117,7 +117,10 @@ namespace Homework_4
            
         }
 
-
+        private void numericUpDown3_ValueChanged(object sender, EventArgs e)
+        {
+            this.successPr = (double)this.numericUpDown3.Value;
+        }
     }
 
 }
